@@ -633,26 +633,38 @@ function buildWhatsappMessage(){
   const instructions=$("instructions").value.trim()||"Sin instrucciones adicionales";
   const items=[...cart.values()];
   const total=items.reduce((s,i)=>s+i.unit*i.quantity,0);
-  const lines=items.map(i=>(i.name+(i.variant?", "+i.variant:"")+", cantidad "+i.quantity+", "+crc(i.unit*i.quantity)));
+  const divider="▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬";
+  const itemLines=items.map((i,idx)=>{
+    const label=i.name+(i.variant?" ("+i.variant+")":"");
+    return (idx+1)+". *"+label+"*\n    "+i.quantity+" x "+crc(i.unit)+" = *"+crc(i.unit*i.quantity)+"*";
+  });
+  const deliveryLines=type==="Express"
+    ? ["🛵 *Entrega:* Express","📍 *Dirección:* "+address]
+    : ["🏠 *Entrega:* Retiro en el local"];
   const message=[
-    "🍗 NUEVO PEDIDO DESDE EL SITIO WEB",
-    "Pedido web #"+orderId,
-    "Cliente: "+name,
-    "Teléfono: "+phone,
-    "Tipo de pedido: "+type,
-    ...(type==="Express"?["Dirección: "+address]:[]),
-    "Método de pago: "+payment,
+    "🍗 *NUEVO PEDIDO — POLLO FRITO GEME*",
+    divider,
+    "🧾 Pedido #"+orderId,
     "",
-    "Pedido:",
-    ...lines,
-    "Total: "+crc(total),
-    "Instrucciones: "+instructions,
+    "👤 *Cliente*",
+    name,
+    "📞 "+phone,
     "",
-    "Pedido pendiente de confirmación por WhatsApp."
+    ...deliveryLines,
+    "",
+    "🍽️ *Detalle del pedido*",
+    ...itemLines,
+    divider,
+    "💰 *Total: "+crc(total)+"*",
+    "",
+    "💳 *Método de pago:* "+payment,
+    "",
+    "📝 *Instrucciones:* "+instructions,
+    divider,
+    "⏳ Pedido pendiente de confirmación por parte del local."
   ];
   return message.join("\n");
 }
-
 function initOrderForm(){
   document.querySelectorAll(".open-drawer").forEach(b=>b.addEventListener("click",()=>openDrawer(b)));
   $("drawer-close").addEventListener("click",closeDrawer);
