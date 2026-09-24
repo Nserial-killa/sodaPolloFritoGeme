@@ -85,7 +85,7 @@
       <a class="hover:text-[color:var(--gold)]" href="#menu">Menú</a>
       <a class="hover:text-[color:var(--gold)]" href="#informacion">Información</a>
       <a class="hover:text-[color:var(--gold)]" href="#opiniones">Opiniones</a>
-      <a class="hover:text-[color:var(--gold)]" href="tel:+50671310771">7131-0771</a>
+      <a class="hover:text-[color:var(--gold)]" href="tel:+50689755791">8975-5791</a>
     </nav>
     <button id="header-order" class="open-drawer inline-flex items-center gap-2 rounded-sm btn-red px-4 py-2 text-sm" type="button">
       <i data-lucide="shopping-bag" class="h-4 w-4" aria-hidden="true"></i>
@@ -111,7 +111,7 @@
         </div>
         <p class="mt-8 flex flex-wrap items-center gap-2 text-sm font-semibold text-[color:var(--muted)]">
           <i data-lucide="phone-call" class="h-4 w-4 text-[color:var(--gold)]"></i>
-          ¿Preferís llamar? <a class="underline decoration-[color:var(--gold)] underline-offset-4 text-[color:var(--cream)]" href="tel:+50671310771">7131-0771</a>
+          ¿Preferís llamar? <a class="underline decoration-[color:var(--gold)] underline-offset-4 text-[color:var(--cream)]" href="tel:+50689755791">8975-5791</a>
         </p>
       </div>
       <div class="justify-self-center">
@@ -184,7 +184,7 @@
             <div>
               <dt class="flex items-center gap-2 font-extrabold uppercase tracking-wide text-[color:var(--gold)] text-sm"><i data-lucide="phone-call" class="h-4 w-4"></i> Llamar directo</dt>
               <dd class="mt-2 text-sm text-[color:var(--muted)]">Para pedir sin usar WhatsApp:</dd>
-              <a class="mt-2 inline-block text-xl font-extrabold text-[color:var(--cream)]" href="tel:+50671310771">7131-0771</a>
+              <a class="mt-2 inline-block text-xl font-extrabold text-[color:var(--cream)]" href="tel:+50689755791">8975-5791</a>
             </div>
             <div>
               <dt class="flex items-center gap-2 font-extrabold uppercase tracking-wide text-[color:var(--gold)] text-sm"><i data-lucide="message-circle" class="h-4 w-4"></i> WhatsApp</dt>
@@ -261,7 +261,7 @@
     <div>
       <p class="mb-3 font-extrabold text-[color:var(--gold)]">Contacto</p>
       <ul class="space-y-2 text-sm text-[color:var(--muted)]">
-        <li><a class="hover:text-[color:var(--cream)]" href="tel:+50671310771">Teléfono: 7131-0771</a></li>
+        <li><a class="hover:text-[color:var(--cream)]" href="tel:+50689755791">Teléfono: 8975-5791</a></li>
         <li><button class="open-drawer text-left hover:text-[color:var(--cream)]" type="button">Pedir por WhatsApp</button></li>
         <!-- PLACEHOLDER: dirección de ejemplo, reemplazar por la dirección real. -->
         <li>Dirección: (completar)</li>
@@ -370,7 +370,7 @@
           <p class="mt-4 rounded-sm border border-[color:rgba(242,183,5,.3)] bg-black/40 px-4 py-3 text-sm leading-relaxed text-[color:var(--muted)]">Al enviar, se abrirá WhatsApp con el resumen de tu pedido listo para enviar. El negocio confirmará disponibilidad, precio final y tiempo de preparación.</p>
           <p id="order-feedback" class="hidden mt-4 rounded-sm px-4 py-3 text-sm font-bold" role="status"></p>
           <button id="whatsapp-order" class="mt-4 w-full rounded-sm btn-primary px-5 py-4" type="submit">Enviar pedido por WhatsApp</button>
-          <p class="mt-4 text-center text-sm text-[color:var(--muted)]">¿Preferís no usar WhatsApp? <a class="underline decoration-[color:var(--gold)] underline-offset-4 font-bold text-[color:var(--cream)]" href="tel:+50671310771">Llamá al 7131-0771</a></p>
+          <p class="mt-4 text-center text-sm text-[color:var(--muted)]">¿Preferís no usar WhatsApp? <a class="underline decoration-[color:var(--gold)] underline-offset-4 font-bold text-[color:var(--cream)]" href="tel:+50689755791">Llamá al 8975-5791</a></p>
         </section>
       </div>
       <section id="order-success" class="hidden py-8 text-center" aria-live="polite">
@@ -464,7 +464,7 @@ const PRODUCTS=[
   {id:"ceviche",name:"Ceviche",desc:"",category:"antojitos",price:2500}
 ];
 const CATEGORY_LABEL={desayunos:"Desayunos",almuerzos:"Almuerzos",pollo:"Pollo",tacos:"Tacos",papas:"Papas y acompañamientos",hamburguesas:"Hamburguesas y sándwiches",antojitos:"Antojitos"};
-const WHATSAPP_NUMBER="50671310771";
+const WHATSAPP_NUMBER="50689755791";
 const cart=new Map();
 let orderId="",lastTrigger=null,currentRating=0;
 const $=id=>document.getElementById(id);
@@ -675,7 +675,7 @@ function initOrderForm(){
       return;
     }
     const text=buildWhatsappMessage();
-    window.open("https://wa.me/89755791"+WHATSAPP_NUMBER+"?text="+encodeURIComponent(text),"_blank","noopener,noreferrer");
+    window.open("https://wa.me/"+WHATSAPP_NUMBER+"?text="+encodeURIComponent(text),"_blank","noopener,noreferrer");
     $("checkout-content").classList.add("hidden");
     $("order-success").classList.remove("hidden");
     $("success-order-code").textContent="Pedido web #"+orderId;
