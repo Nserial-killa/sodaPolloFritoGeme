@@ -639,29 +639,29 @@ function buildWhatsappMessage(){
     return (idx+1)+". *"+label+"*\n    "+i.quantity+" x "+crc(i.unit)+" = *"+crc(i.unit*i.quantity)+"*";
   });
   const deliveryLines=type==="Express"
-    ? ["🛵 *Entrega:* Express","📍 *Dirección:* "+address]
-    : ["🏠 *Entrega:* Retiro en el local"];
+    ? [" *Entrega:* Express"," *Dirección:* "+address]
+    : [" *Entrega:* Retiro en el local"];
   const message=[
-    "🍗 *NUEVO PEDIDO — POLLO FRITO GEME*",
+    " *NUEVO PEDIDO — POLLO FRITO GEME*",
     divider,
-    "🧾 Pedido #"+orderId,
+    " Pedido #"+orderId,
     "",
-    "👤 *Cliente*",
+    " *Cliente*",
     name,
-    "📞 "+phone,
+    " "+phone,
     "",
     ...deliveryLines,
     "",
-    "🍽️ *Detalle del pedido*",
+    " *Detalle del pedido*",
     ...itemLines,
     divider,
-    "💰 *Total: "+crc(total)+"*",
+    " *Total: "+crc(total)+"*",
     "",
-    "💳 *Método de pago:* "+payment,
+    " *Método de pago:* "+payment,
     "",
-    "📝 *Instrucciones:* "+instructions,
+    " *Instrucciones:* "+instructions,
     divider,
-    "⏳ Pedido pendiente de confirmación por parte del local."
+    " Pedido pendiente de confirmación por parte del local."
   ];
   return message.join("\n");
 }
