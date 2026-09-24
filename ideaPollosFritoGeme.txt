@@ -1,0 +1,49 @@
+Quiero que te conviertas en un experto en desarrollo frontend y me creas un sitio web para una soda. La soda se llama: "Pollo Frito GEME". La idea es atraer mas clientes y que el usuarios pueda ordenar desde el sitio web, que la manera de ordenar sea confiable, facil y segura. La idea esque se cuando quiera hacer una orden, despues de decidir que quiero, se lanze un formulario en una pantalla desplegable que le indique al usuario lo datos que tiene que agregar para completar la orden. El local vende desayunos, almuerzos y comida rapida.
+
+te voy a poner un ejemplo:
+
+supungamos que quiero 2 tacos pequenos, cuando lo reviso en el carrito y le doy click al boton de "agregar al carrito" o "ordenar", cuando le da click a ordenar se va a mostrar una pantalla desplegable que tambien se mostrara cuando le da click al "carrito", este tendra para finalizar el pedido:
+
+Nombre del cliente:
+
+Telefono:
+
+Tipo de pedido(dropdown):
+    - Retirar en el local
+    - Express
+
+Metodo de pago (dropdown):
+    - Efectivo
+    - Sinpe Movil
+    - Otro (area de texto)
+
+Instrucciones (textArea):
+
+    - La idea aqui esque el usuario Escriba si quiero algo extra o instrucciones especiales para su pedido.
+
+
+
+Luego de que tenga todos los datos llenos, le da a "Enviar pedido por whatsapp" y este le enviara un SMS al numero de la soda, un SMS predeterminado diferenciador indicando el pedido con los datos que lleno.
+
+Si el usuario no quiere mandar un whatsapp, en un seccion estara el numero de telefono, que cuando este le de click se redigira directo al telefono para llamar o solamente que se vea el numero para llamar y pedir.
+
+
+*Te voy a enviar imagenes que seran: El logo, El menu*.
+
+Quiero que con base al logo y el menu armes el diseno y toda la funcionalidad completa de este sitio web, Quiero que sea un sitio profesional, responsivo y que cuando el usuario lo vea, le den ganas de comprar.
+
+Quiero que tambien hayan desiciones a la hora de ordenar algun producto, por ejemplo:
+- con el sadwich de carne se puede ordenar solo o con papas, solo cuesta 2000 colones, con papas cuesta 3000 colones. Puede haber un checkbox que marque "con papas" y al lado el precio total con papas.
+
+Tambien la idea es agregar una foto real del producto al lado de la tarjeta del producto y lo que trae, adapata el menu al sitio web.
+
+Quiero que esten las siguientes secciones:
+
+ - INICIO: inicio del sitio web
+ - Menu: Mostrando el menu
+ - Informacion: muestra informacion del local, como se ve por fuera (una imagen), ubicacion (google maps), Horarios.
+
+
+ Tambien otra seccion donde los usuarios puedan agregar un comentario y calificacion de la soda.
+
+ Y por ultimo en el footer, que sea un footer completo y promocionando las redes sociales para que desde el sitio web los diriga a las redes sociales.
